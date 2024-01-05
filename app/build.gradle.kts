@@ -1,6 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -52,6 +55,18 @@ dependencies {
     //Glide
     implementation("com.github.bumptech.glide:glide:4.14.2")
     annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
+
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
+
+    //dagger hilt
+    implementation("com.google.dagger:hilt-android:2.42")
+    kapt("com.google.dagger:hilt-compiler:2.42")
+
+    //android ktx
+    implementation("androidx.activity:activity-ktx:1.6.1")
+
+    //hilt viewmodel
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
 
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")

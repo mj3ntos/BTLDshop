@@ -1,12 +1,9 @@
-package com.example.btldshop.fragments.onboarding.custombinding
+package com.example.btldshop.fragments.onboarding.custombind
 
-import android.widget.ImageView
 import androidx.databinding.Bindable
-import androidx.databinding.BindingAdapter
 import androidx.databinding.Observable
 import androidx.databinding.PropertyChangeRegistry
 import androidx.databinding.library.baseAdapters.BR
-import com.bumptech.glide.Glide
 
 
 class OnboardBinding: Observable {
@@ -26,6 +23,12 @@ class OnboardBinding: Observable {
             listener.notifyChange(this, BR.slogsdesc)
         }
 
+    @get:Bindable
+    var image : String ?= null
+        set(value){
+            field = value
+            listener.notifyChange(this, BR.image)
+        }
 
 
 
